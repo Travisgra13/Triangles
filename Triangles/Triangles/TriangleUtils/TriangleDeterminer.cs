@@ -52,7 +52,7 @@ namespace Triangles
 			
 			else
             {
-				return new Scalene(sideALen, sideBLen, sideCLen);
+				return new Triangle(sideALen, sideBLen, sideCLen);
             }
         }
 

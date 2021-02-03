@@ -16,7 +16,7 @@ namespace Triangles
 		}
 		public virtual String printTriangleData()
         {
-			return "This is an Invalid Triangle.";
+			return "This is a Triangle. \nValid?: " + this.isValid();
         }
 
 		public bool isValid()
