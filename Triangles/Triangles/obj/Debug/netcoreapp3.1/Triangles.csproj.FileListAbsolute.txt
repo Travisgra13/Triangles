@@ -1,0 +1,13 @@
+C:\Users\Travis Graham\source\repos\Triangles\Triangles\bin\Debug\netcoreapp3.1\Triangles.exe
+C:\Users\Travis Graham\source\repos\Triangles\Triangles\bin\Debug\netcoreapp3.1\Triangles.deps.json
+C:\Users\Travis Graham\source\repos\Triangles\Triangles\bin\Debug\netcoreapp3.1\Triangles.runtimeconfig.json
+C:\Users\Travis Graham\source\repos\Triangles\Triangles\bin\Debug\netcoreapp3.1\Triangles.runtimeconfig.dev.json
+C:\Users\Travis Graham\source\repos\Triangles\Triangles\bin\Debug\netcoreapp3.1\Triangles.dll
+C:\Users\Travis Graham\source\repos\Triangles\Triangles\bin\Debug\netcoreapp3.1\Triangles.pdb
+C:\Users\Travis Graham\source\repos\Triangles\Triangles\obj\Debug\netcoreapp3.1\Triangles.AssemblyInfoInputs.cache
+C:\Users\Travis Graham\source\repos\Triangles\Triangles\obj\Debug\netcoreapp3.1\Triangles.AssemblyInfo.cs
+C:\Users\Travis Graham\source\repos\Triangles\Triangles\obj\Debug\netcoreapp3.1\Triangles.csproj.CoreCompileInputs.cache
+C:\Users\Travis Graham\source\repos\Triangles\Triangles\obj\Debug\netcoreapp3.1\Triangles.dll
+C:\Users\Travis Graham\source\repos\Triangles\Triangles\obj\Debug\netcoreapp3.1\Triangles.pdb
+C:\Users\Travis Graham\source\repos\Triangles\Triangles\obj\Debug\netcoreapp3.1\Triangles.genruntimeconfig.cache
+C:\Users\Travis Graham\source\repos\Triangles\Triangles\obj\Debug\netcoreapp3.1\Triangles.csprojAssemblyReference.cache
