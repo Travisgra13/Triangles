@@ -5,15 +5,15 @@ namespace Triangles
 {
 	public class TriangleDeterminer
 	{
-		private Object sideACandidate;
-		private Object sideBCandidate;
-		private Object sideCCandidate;
+		private String sideACandidate;
+		private String sideBCandidate;
+		private String sideCCandidate;
 
-		private int sideALen;
-		private int sideBLen;
-		private int sideCLen;
+		private double sideALen;
+		private double sideBLen;
+		private double sideCLen;
 
-		public TriangleDeterminer(Object sideA, Object sideB, Object sideC)
+		public TriangleDeterminer(String sideA, String sideB, String sideC)
 		{
 			this.sideACandidate = sideA;
 			this.sideBCandidate = sideB;
@@ -22,9 +22,9 @@ namespace Triangles
 
 		public Triangle determine()
         {
-			if (!inputIsValidNumbers(sideACandidate, sideBCandidate, sideCCandidate))
+			if (inputIsValidNumbers())
 			{
-				
+				return determineTriangle();
 			}
 
 			else
@@ -52,7 +52,7 @@ namespace Triangles
 			
 			else
             {
-				throw new Exception("Triangle type not handled");
+				return new Scalene(sideALen, sideBLen, sideCLen);
             }
         }
 
@@ -70,36 +70,44 @@ namespace Triangles
 
 		private bool isRightTriangle()
         {
-			int[] arr = new int[3];
+			double[] arr = new double[3];
+			arr[0] = this.sideALen;
+			arr[1] = this.sideBLen;
+			arr[2] = this.sideCLen;
 			Array.Sort(arr);
-			int a = arr[0];
-			int aSquare = square(a);
-			int b = arr[1];
-			int bSquare = square(b);
-			int c = arr[2];
-			int cSquare = square(c);
+			double a = arr[0];
+			double aSquare = Math.Pow(a, 2);
+			double b = arr[1];
+			double bSquare = Math.Pow(b, 2);
+			double c = arr[2];
+			double cSquare = Math.Pow(c, 2);
 
 			return (aSquare + bSquare) == cSquare;
         }
 
-		private int square(int num)
-        {
-			return num * num;
-        }
-
-
-		private bool inputIsValidNumbers(Object sideA, Object sideB, Object sideC)
+		private bool inputIsValidNumbers()
 		{
+			if (!Regex.IsMatch(sideACandidate, @"^[+-]?(\d*\.)?\d+$") ||
+				(!Regex.IsMatch(sideBCandidate, @"^[+-]?(\d*\.)?\d+$")) ||
+				(!Regex.IsMatch(sideCCandidate, @"^[+-]?(\d*\.)?\d+$")))
+			{
+				return false;
+			}
 			try
 			{
-				this.sideALen = (int)sideA;
-				this.sideBLen = (int)sideB;
-				this.sideCLen = (int)sideC;
+				this.sideALen = Convert.ToDouble(sideACandidate);
+				this.sideBLen = Convert.ToDouble(sideBCandidate);
+				this.sideCLen = Convert.ToDouble(sideCCandidate);
 				return true;
 			}
 			catch (InvalidCastException e)
 			{
 				Console.WriteLine(e.Source);
+				return false;
+			}
+			catch (OverflowException ex)
+            {
+				Console.WriteLine(ex.Source);
 				return false;
 			}
 		}

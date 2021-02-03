@@ -3,14 +3,14 @@ namespace Triangles
 {
 	public class Iscosceles : Triangle
 	{
-		public Iscosceles(int sideALen, int sideBLen, int sideCLen) : base(sideALen, sideBLen, sideCLen)
+		public Iscosceles(double sideALen, double sideBLen, double sideCLen) : base(sideALen, sideBLen, sideCLen)
 		{
 
 		}
 
-		public override string printTriangleType()
+		public override string printTriangleData()
 		{
-			return "This is an Iscosceles Triangle";
+			return "This is an Iscosceles Triangle. \nValid?: " + this.isValid();
 		}
 	}
 

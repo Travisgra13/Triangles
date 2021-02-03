@@ -4,11 +4,11 @@ namespace Triangles
 	public class Right : Triangle
 	{
 
-		public Right(int sideALen, int sideBLen, int sideCLen) : base(sideALen, sideBLen, sideCLen) {}
+		public Right(double sideALen, double sideBLen, double sideCLen) : base(sideALen, sideBLen, sideCLen) {}
 
-        public override string printTriangleType()
+        public override string printTriangleData()
         {
-            return "This is a Right Triangle";
+            return "This is a Right Triangle. \nValid?: " + this.isValid();
         }
     }
 }

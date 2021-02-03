@@ -4,14 +4,14 @@ namespace Triangles
 {
 	public class Equilateral : Triangle
 	{
-		public Equilateral(int sideALen, int sideBLen, int sideCLen) : base(sideALen, sideBLen, sideCLen)
+		public Equilateral(double sideALen, double sideBLen, double sideCLen) : base(sideALen, sideBLen, sideCLen)
 		{
 
 		}
 
-		public override string printTriangleType()
+		public override string printTriangleData()
 		{
-			return "This is an Equilateral Triangle";
+			return "This is an Equilateral Triangle \nValid?: " + this.isValid();
 		}
 	}
 }
