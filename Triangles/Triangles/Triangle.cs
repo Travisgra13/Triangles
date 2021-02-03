@@ -16,7 +16,7 @@ namespace Triangles
 		}
 		public virtual String printTriangleType()
         {
-			return "This is a Base Triangle";
+			return "This is an Invalid Triangle";
         }
 
 		public bool isValid()
