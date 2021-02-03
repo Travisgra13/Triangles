@@ -11,7 +11,7 @@ namespace Triangles
 
 		public override string printTriangleData()
 		{
-			return "This is a Scalene Triangle \nValid?: " + this.isValid();
+			return "This is a Scalene Triangle. \nValid?: " + this.isValid();
 		}
 	}
 }

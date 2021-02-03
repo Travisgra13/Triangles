@@ -11,7 +11,7 @@ namespace Triangles
 
 		public override string printTriangleData()
 		{
-			return "This is an Equilateral Triangle \nValid?: " + this.isValid();
+			return "This is an Equilateral Triangle. \nValid?: " + this.isValid();
 		}
 	}
 }
