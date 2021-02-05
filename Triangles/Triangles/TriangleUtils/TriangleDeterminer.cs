@@ -37,22 +37,17 @@ namespace Triangles
         {
 			if (isEquilateralTriangle())
             {
-				return new Equilateral(sideALen, sideBLen, sideCLen);
+				return new Equilateral(sideALen, sideBLen, sideCLen, AngleTriangleDeterminer.determineAngleType(sideALen, sideBLen, sideCLen));
             }
 
 			else if (isIsoscelesTriangle())
             {
-				return new Iscosceles(sideALen, sideBLen, sideCLen);
+				return new Isosceles(sideALen, sideBLen, sideCLen, AngleTriangleDeterminer.determineAngleType(sideALen, sideBLen, sideCLen));
             }
 
-			else if (isRightTriangle())
+			else 
             {
-				return new Right(sideALen, sideBLen, sideCLen);
-            }
-			
-			else
-            {
-				return new Triangle(sideALen, sideBLen, sideCLen);
+				return new Scalene(sideALen, sideBLen, sideCLen, AngleTriangleDeterminer.determineAngleType(sideALen, sideBLen, sideCLen));
             }
         }
 
@@ -68,22 +63,7 @@ namespace Triangles
 				(this.sideALen == this.sideCLen && this.sideALen != this.sideBLen);
         }
 
-		private bool isRightTriangle()
-        {
-			double[] arr = new double[3];
-			arr[0] = this.sideALen;
-			arr[1] = this.sideBLen;
-			arr[2] = this.sideCLen;
-			Array.Sort(arr);
-			double a = arr[0];
-			double aSquare = Math.Pow(a, 2);
-			double b = arr[1];
-			double bSquare = Math.Pow(b, 2);
-			double c = arr[2];
-			double cSquare = Math.Pow(c, 2);
-
-			return (aSquare + bSquare) == cSquare;
-        }
+		
 
 		private bool inputIsValidNumbers()
 		{
